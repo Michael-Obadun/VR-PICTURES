@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-6l2jrt(94e9#66o3tj#2gp62dcz#(n*r&e^gxfe)8u)f631qbl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['8000-michaelobadu-vrpictures-e2baddt6z9l.ws.codeinstitute-ide.net']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'homePage',
 ]
 
 MIDDLEWARE = [
