@@ -21,3 +21,12 @@ class Comment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     
 
+
+class Meeting(models.Model):
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="meetings")
+    platform = models.CharField(max_length=200, unique=True)
+    venue = models.CharField(max_length=200, unique=True)
+    discription = models.TextField()
+    start_time = models.DateTimeField()
+
+
