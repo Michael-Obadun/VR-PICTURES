@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Create your models here.
+# This is my Post Model.
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
@@ -12,3 +12,12 @@ class Post(models.Model):
     caption = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
+
+
+class Comment(models.Model):
+    username = models.ForeignKey(User, on_delete=models.CASCADE,
+                                 related_name="commenter")
+    comments = models.TextField()                           
+    created_on = models.DateTimeField(auto_now_add=True)
+    
+
