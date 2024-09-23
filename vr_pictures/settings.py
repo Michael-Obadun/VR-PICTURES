@@ -28,9 +28,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'SECRET_KEY'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['8000-michaelobadu-vrpictures-e2baddt6z9l.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-michaelobadu-vrpictures-e2baddt6z9l.ws.codeinstitute-ide.net',
+                '.herokuapp.com']
 
 
 # Application definition
