@@ -17,9 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from homePage.views import my_homePage
-
+from userPage.views import my_userPage
 
 urlpatterns = [
+    path('userPage/', my_userPage, name='userPage'),
     path('homePage/', my_homePage, name='homePage'),
     path('summernote/', include('django_summernote.urls')),
     path('admin/', admin.site.urls),
