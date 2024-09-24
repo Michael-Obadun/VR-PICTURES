@@ -1,6 +1,14 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import Post
 
 # Create your views here.
-def my_userPage(request):
-    return HttpResponse("my user page")
+class PostList(generic.ListView):
+    #model = Post
+    queryset = Post.objects.all()
+    template_name = "user_list.html"
+
+
+
+
+
