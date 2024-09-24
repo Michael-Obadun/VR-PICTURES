@@ -19,8 +19,8 @@ from django.urls import path, include
 
 
 urlpatterns = [
-    #path("userPage/", include("userPage.urls"), name="userPage-urls"),
-    path("homePage/", include("homePage.urls"), name="homePage-urls"),
+    path("userPage/", include("userPage.urls"), name="userPage-urls"),
+    path("", include("homePage.urls"), name="homePage-urls"),
     path('summernote/', include('django_summernote.urls')),
     path('admin/', admin.site.urls),
 ]
