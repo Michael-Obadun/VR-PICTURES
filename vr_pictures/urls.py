@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from homePage.views import my_homePage
 
+
 urlpatterns = [
     path('homePage/', my_homePage, name='homePage'),
     path('summernote/', include('django_summernote.urls')),
