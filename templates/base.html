@@ -1,328 +1,73 @@
+{% url 'home' as home_url %}
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Added discription and keywords meta tags-->
-    <meta
-      name="description"
-      content="A webite that allows users to upload and share there VR images with other Users"
-    />
-    <meta
-      name="keywords"
-      content="Vr, Virtual reality, images, Vr images, comment, ratings, Playstion VR, Apple vision Pro, quest 2, quest 3"
-    />
-    <title>The VR Hub</title>
-    <!--This is our favicon-->
-    <link rel="icon" type="image.jpg" href="assets/images/" />
-    <!--This is a link to google fonts-->
-    <script
-      src="https://kit.fontawesome.com/d15c2a037f.js"
-      crossorigin="anonymous"
-    ></script>
-    <!--This is mu link to bootstrap-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <!--This is to link this page to my css style/sheet-->
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
+<html class="h-100" lang="en">
 
-  <body>
-    <div class="homeimage">
-      <!--This is my top navbar-->
-      <nav class="navbar navbar-expand-sm navbar-light">
+<head>
+    <title>CodeStar Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google Fonts CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+</head>
+
+<body class="d-flex flex-column h-100 main-bg">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-          <a href="/" class="navbar-brand" aria-current="page" href="#"
-            ><i class="fa-solid fa-house"></i
-          ></a>
-          <a class="navbar-brand" href="#"
-            ><img
-              src="assets/images/vrhubfavicon.jpeg"
-              alt=""
-              width="75"
-              height="60"
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#topNav"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="topNav">
-            <ul class="navbar-nav ms-auto text-start">
-              <li class="nav-item ms-auto text-start">
-                <a class="nav-link" href="/about">Anout Us</a>
-              </li>
-              <li class="nav-item ms-auto text-start">
-                <a class="nav-link" href="/about">Contact us</a>
-              </li>
-              <li class="nav-item ms-auto text-start">
-                <a class="nav-link" href="/about">Register</a>
-              </li>
-              <li class="nav-item ms-auto text-start">
-                <a class="nav-link" href="/about">Login</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">c<span class="red-o">o</span>de<span
+                        class="thin">|star</span></span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
+                            href="#">Home</a>
+                    </li>
 
-      <!--This is my Heading and Paragraph-->
-      <h1 class="indexH1">
-        WELCOME TO THE <br />
-        VR IMAGE HUB
-      </h1>
-      <p class="indexP">
-        Are you teired of constantly having to erase data from your Oculus Quest
-        Headset to be able to install more games or images. Or pregaps your just
-        looking for one iseal place to save all your VR images and videos. Then
-        this is the website for you.
-      </p>
-
-      <!--This is my Main Sextion-->
-      <div class="Carousel-div">
-        <!--This is my Carousel-->
-        <div
-          id="carouselExampleFade"
-          class="carousel slide carousel-fade"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="assets/images/pc1.png"
-                class="d-block w-100"
-                alt="..."
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="assets/images/pc2.png"
-                class="d-block w-100"
-                alt="..."
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="assets/images/pc3.png"
-                class="d-block w-100"
-                alt="..."
-              />
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleFade"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleFade"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-
-          <div>
-            <div class="d-grid gap-2 col-6 mx-auto">
-              <!-- Button trigger for the Register In modal -->
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#registerModal"
-              >
-                Register
-              </button>
-              <!-- Register Modal -->
-              <div
-                class="modal fade"
-                id="registerModal"
-                tabindex="-1"
-                aria-labelledby="registerModal"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="registerModal">Register</h5>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">
-                      <form action="/action_page.php">
-                        <label for="fname">First name:</label>
-                        <input
-                          type="text"
-                          id="fname"
-                          name="fname"
-                        /><br /><br />
-                        <label for="lname">Last name:</label>
-                        <input
-                          type="text"
-                          id="lname"
-                          name="lname"
-                        /><br /><br />
-                        <input type="submit" value="Submit" />
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Button trigger for the Sign In modal -->
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#signInModal"
-              >
-                Sign In
-              </button>
-              <!-- Register Modal -->
-              <div
-                class="modal fade"
-                id="signInModal"
-                tabindex="-1"
-                aria-labelledby="signInModal"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="signInModal">Sign In</h5>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">
-                      <form action="/action_page.php">
-                        <label for="fname">First name:</label>
-                        <input
-                          type="text"
-                          id="fname"
-                          name="fname"
-                        /><br /><br />
-                        <label for="lname">Last name:</label>
-                        <input
-                          type="text"
-                          id="lname"
-                          name="lname"
-                        /><br /><br />
-                        <input type="submit" value="Submit" />
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!--This is my Features-->
-      <div class="features">
-        <div class="features-upload">
-          Upload and Share your Vr images With Other Users
-        </div>
-        <div class="features-store">
-          A one stop place to Store all Your VR Images
-        </div>
-        <div class="features-comment">
-          Rate, Like and Comment on other users Images
-        </div>
-        <div class="features-community">
-          class="features"Join A large Community of Like Minded Users
-        </div>
-      </div>
-
-      <!--This is my Footer-->
-      <div class="footer-container">
-        <footer class="container-fluid">
-          <div class="row py-2 px-md-5 px-sm-3 d-flex align-items-center">
-            <div class="col-sm-6">
-              <ul class="navbar-nav font-weight-200">
-                <li class="nav-item">
-                  <a href="london.html" class="nav-link">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a href="birmingham.html" class="nav-link">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                  <a href="oxford.html" class="nav-link">Coming soon</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-sm-2 col-12">
-              <div class="d-flex flex-column align-items-center">
-                <ul class="navbar-nav d-flex flex-row h4">
-                  <li class="nav-item px-3">
-                    <a
-                      class="nav-link p-0"
-                      href="https://www.facebook.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="facebook"
-                    >
-                      <i class="fa-brands fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li class="nav-item px-3">
-                    <a
-                      class="nav-link p-0"
-                      href="https://x.com/?lang=en"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="facebook"
-                    >
-                      <i class="fa-brands fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li class="nav-item px-3">
-                    <a
-                      class="nav-link p-0"
-                      href="https://www.instagram.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="facebook"
-                    >
-                      <i class="fa-brands fa-instagram"></i>
-                    </a>
-                  </li>
                 </ul>
-              </div>
+                <span class="navbar-text text-muted">
+                    adventures of a software developer
+                </span>
             </div>
-          </div>
-        </footer>
-      </div>
-    </div>
+        </div>
+    </nav>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <main class="flex-shrink-0 main-bg">
+
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 dark-bg">
+        <p class="m-0 text-center text-white">Made by Code Instituters</p>
+        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
+            <i class="fab fa-twitter-square ms-3"></i>
+            <i class="fab fa-instagram-square ms-3"></i>
+            <i class="fab fa-youtube-square ms-3"></i>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+        </script>
+</body>
+
 </html>

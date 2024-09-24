@@ -20,7 +20,7 @@ from userPage.views import my_userPage
 
 urlpatterns = [
     path('userPage/', my_userPage, name='userPage'),
-    path("", include("homePage.urls"), name="homePage-urls"),
+    path("homePage/", include("homePage.urls"), name="homePage-urls"),
     path('summernote/', include('django_summernote.urls')),
     path('admin/', admin.site.urls),
 ]
