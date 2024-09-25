@@ -30,9 +30,8 @@
     <nav class="navbar navbar-expand-sm navbar-light">
         <div class="container-fluid">
           <a href="{% if request.path == homePage_url %}active{%endif%}"
-          aria-current="page" href="{% url 'homePage' %}" class="navbar-brand" aria-current="page" href="{% if request.path == homePage_url %}active{%endif%}"
-          aria-current="page" href="{% url 'homePage' %}"><i class="fa-solid fa-house"></i></a>
-          <a class="navbar-brand" href="#"><img src="" alt="" width="75" height="60"></a>
+          aria-current="page" href="{% url 'homePage' %}" class="navbar-brand" aria-current="page" href=""><i class="fa-solid fa-house"></i></a>
+          <a class="navbar-brand" href="{% if request.path == homePage_url %}active{%endif%}"><img src="" alt="" width="75" height="60"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNav"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
