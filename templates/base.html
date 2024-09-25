@@ -29,16 +29,18 @@
     <!--This is my top navbar-->
     <nav class="navbar navbar-expand-sm navbar-light">
         <div class="container-fluid">
-          <a href="/" class="navbar-brand" aria-current="page" href="#"><i class="fa-solid fa-house"></i></a>
-          <a class="navbar-brand" href="#"><img src="assets/images/vrhubfavicon.jpeg" alt="" width="75" height="60"></a>
+          <a href="{% if request.path == homePage_url %}active{%endif%}"
+          aria-current="page" href="{% url 'homePage' %}" class="navbar-brand" aria-current="page" href="{% if request.path == homePage_url %}active{%endif%}"
+          aria-current="page" href="{% url 'homePage' %}"><i class="fa-solid fa-house"></i></a>
+          <a class="navbar-brand" href="#"><img src="" alt="" width="75" height="60"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNav"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="topNav">
             <ul class="navbar-nav ms-auto text-start">
-              <li class="nav-item ms-auto text-start"><a class="nav-link" href="/about">Register</a></li>
-              <li class="nav-item ms-auto text-start"><a class="nav-link" href="/about">Login</a></li>
+              <li class="nav-item ms-auto text-start"><a class="nav-link" href="">Register</a></li>
+              <li class="nav-item ms-auto text-start"><a class="nav-link" href="">Login</a></li>
             </ul>
           </div>
         </div>
