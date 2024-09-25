@@ -38,8 +38,8 @@
           </button>
           <div class="collapse navbar-collapse" id="topNav">
             <ul class="navbar-nav ms-auto text-start">
-              <li class="nav-item ms-auto text-start"><a class="nav-link" href="">Register</a></li>
-              <li class="nav-item ms-auto text-start"><a class="nav-link" href="">Login</a></li>
+              <li class="nav-item ms-auto text-start"><a class="nav-link" href="{% if request.path == registerPage_url %}active{%endif%}">Register</a></li>
+              <li class="nav-item ms-auto text-start"><a class="nav-link" href="{% if request.path == signInPage_url %}active{%endif%}">Sign In</a></li>
             </ul>
           </div>
         </div>
